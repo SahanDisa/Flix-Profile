@@ -1,4 +1,4 @@
-# calcapp
+# Flix Profile App
 
 A new Flutter application.
 
