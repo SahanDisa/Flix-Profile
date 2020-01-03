@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DashBoard</title>
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="icon" type="img/png" href="../images/58482ec0cef1014c0b5e4a70%20-%20Copy.png">
+</head>
+<style>
+    .customerImage{
+         height: 150px;
+         width: 150px;
+         background-color: #5a6268;
+         border-radius: 75px;
+         margin-left: 2vw;
+     }
+    #abc{
+        background-color: #b3b3b7;
+    }
+    #abcd{
+        background-color: #3e3e42;
+    }
+    #footer{
+        align-content: center;
+        color: #5a6268;
+    }
+    .new a{
+        font-size: 20px;
+        font-family: Verdana;
+        padding: 20px;
+    }
+</style>
+<script>
+    window.onload = function () {
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            exportEnabled: true,
+            theme: "light1", // "light1", "light2", "dark1", "dark2"
+            title:{
+                text: "Annual Sales"
+            },
+            data: [{
+                type: "column", //change type to bar, line, area, pie, etc
+                //indexLabel: "{y}", //Shows y value on all Data Points
+                indexLabelFontColor: "#5A5757",
+                indexLabelPlacement: "outside",
+                dataPoints: [
+                    { x: 10, y: 71 },
+                    { x: 20, y: 55 },
+                    { x: 30, y: 50 },
+                    { x: 40, y: 65 },
+                    { x: 50, y: 92, indexLabel: "Highest" },
+                    { x: 60, y: 68 },
+                    { x: 70, y: 38 },
+                    { x: 80, y: 71 },
+                    { x: 90, y: 54 },
+                    { x: 100, y: 60 },
+                    { x: 110, y: 36 },
+                    { x: 120, y: 49 },
+                    { x: 130, y: 21, indexLabel: "Lowest" }
+                ]
+            }]
+        });
+        chart.render();
+
+
+        var chart = new CanvasJS.Chart("chartContainers", {
+            animationEnabled: true,
+            exportEnabled: true,
+            title: {
+                text: "Product Manufacturing Sections"
+            },
+            data: [{
+                type: "pyramid",
+                indexLabelFontSize: 18,
+                valueRepresents: "area",
+                showInLegend: true,
+                legendText: "{indexLabel}",
+                toolTipContent: "<b>{indexLabel}:</b> {y}%",
+                dataPoints: [
+                    {y: 30, indexLabel: "Research and Design"},
+                    {y: 30, indexLabel: "Manufacturing"},
+                    {y: 15, indexLabel: "Marketing"},
+                    {y: 13, indexLabel: "Shipping"},
+                    {y: 12, indexLabel: "Retail"}
+                ]
+            }]
+        });
+        chart.render();
+
+
+
+        var chart = new CanvasJS.Chart("chartContainerss", {
+            animationEnabled: true,
+            theme: "light2",
+            title:{
+                text: "Annual Scatter diagram"
+            },
+            axisY:{
+                includeZero: false
+            },
+            data: [{
+                type: "line",
+                dataPoints: [
+                    { y: 450 },
+                    { y: 414},
+                    { y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+                    { y: 460 },
+                    { y: 450 },
+                    { y: 500 },
+                    { y: 480 },
+                    { y: 480 },
+                    { y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+                    { y: 500 },
+                    { y: 480 },
+                    { y: 510 }
+                ]
+            }]
+        });
+        chart.render();
+    }
+</script>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img src="../images/58482ec0cef1014c0b5e4a70%20-%20Copy.png" width="50px">
+    <a class="navbar-brand" href="#">CafePro</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html"><img src="../images/pos/home.png" width="20px">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../html/dashboard.html"><img src="../images/pos/dashboard.png" width="20px">Dashboard</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../html/delivery.html"><img src="../images/pos/p2.png" width="20px">Delivery</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../html/orderitems.html"><img src="../images/pos/p4.png" width="20px">Order Items</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../html/ijse.html"><img src="../images/pos/p5.png" width="20px">Contact Us(IJSE)</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../html/employee.html">Employees</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../html/ijse.html">Contact Us</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><a href="../html/sign-up.html">Sign Up</a></button>
+        </form>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-2" id="abcd">
+            <div class="navi">
+                <div class="customerImage">
+                </div>
+                <hr/>
+                <nav class="nav flex-column">
+                    <div class="new">
+                    <a class="nav-link active" href="../html/dashboard.html">DashBoard</a>
+                    <a class="nav-link" href="../index.html" >Customer</a>
+                    <a class="nav-link" href="../html/items.html">Items</a>
+                    <a class="nav-link" href="../html/orderitems.html">Order</a>
+                    <a class="nav-link" href="../html/employee.html">Employees</a>
+                    <a class="nav-link" href="../html/delivery.html">Delivery</a>
+                    <a class="nav-link" href="../html/ijse.html">Contact Us</a>
+                    <hr/>
+                        <img src="../images/result_chart.gif" width="200vw">
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-10" id="abc">
+            <h2>Welcome to your Store..</h2>
+            <h3>Here Are our Strategies</h3>
+            <hr/>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Customers</div>
+                        <div class="card-body">
+                            <img src="../images/pos/p2.png" width="100px">
+                            <h3>123</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Items</div>
+                        <div class="card-body">
+                            <img src="../images/pos/p1.png" width="100px">
+                            <h3>101</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header">MyOrders</div>
+                        <div class="card-body">
+                            <img src="../images/pos/p3.png" width="100px">
+                            <h3>988</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Settings</div>
+                        <div class="card-body">
+                            <img src="../images/pos/settings.png" width="100px">
+                            <h3>NEW</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Statistics of Sales</h3>
+            <hr/>
+            <div class="jumbotron">
+                <div class="container-fluid" id="chartContainer" style="height: 300px; width: 50vw;"></div>
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                <div class="container-fluid" id="chartContainers" style="height: 300px; width: 50vw;"></div>
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                <div class="container-fluid" id="chartContainerss" style="height: 300px; width: 50vw;"></div>
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid" id="footer">
+    <h5>developed by Sahan Dissanayaka</h5>
+    <p>Copyright @2018</p>
+</div>
+<script type="text/javascript" rel="script" src="../js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" rel="script" src="../js/bootstrap.min.js"></script>
+</body>
+</html>
