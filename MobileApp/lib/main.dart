@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -11,13 +12,28 @@ class IDCard extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.deepPurpleAccent,
       appBar: AppBar(
+        
         title: Text('Flix Profile'),
         centerTitle: true,
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
+        actions: <Widget>[
+          IconButton(
+              icon: const Icon(Icons.add_alert),
+              tooltip: 'Show Alert Box',
+              onPressed: null
+          ),
+          IconButton(
+              icon: Icon(Icons.close),
+              onPressed: (){
+                Navigator.pop(context);
+              },
+          ),
+
+        ],
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 30.0, 40.0, 30.0),
+        padding: EdgeInsets.fromLTRB(30.0, 20.0, 40.0, 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -33,7 +49,7 @@ class IDCard extends StatelessWidget {
               thickness: 0.75,
             ),
             SizedBox(
-              height: 30.0,
+              height: 10.0,
             ),
             Text(
                 'Sahan Dissanayaka',
@@ -72,7 +88,7 @@ class IDCard extends StatelessWidget {
               height: 10.0,
             ),
             Text(
-              'Angular ReatJS Flutter & Android',
+              'Angular,ReatJS,Flutter,Android,Web,Java,C/C++,Linux',
               style: TextStyle(
                 color: Colors.amberAccent,
                 fontSize: 22.0,
@@ -81,7 +97,7 @@ class IDCard extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 30.0,
+              height: 10.0,
             ),
             Row(
               children: <Widget>[
@@ -117,7 +133,33 @@ class IDCard extends StatelessWidget {
 
               ],
             ),
+            Card(
+              elevation: 8.0,
+              child: ListTile(
+                leading: Icon(Icons.camera),
+                title: Text('Linkedlin Profile'),
+                subtitle: Text('https://www.linkedin.com/in/sahan-dissanayaka-3099b9191'),
 
+              ),
+            ),
+            Card(
+              elevation: 8.0,
+              child: ListTile(
+                leading: Icon(Icons.camera),
+                title: Text('Sololearn Profile'),
+                subtitle: Text('sololearn@sahan-dissanayaka'),
+
+              ),
+            ),
+            Card(
+              elevation: 8.0,
+              child: ListTile(
+                leading: Icon(Icons.camera),
+                title: Text('Github Profile'),
+                subtitle: Text('https://www.github.com/SahanDisa'),
+
+              ),
+            ),
           ],
 
         ),
